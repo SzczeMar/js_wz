@@ -79,4 +79,7 @@ let CourtSession = (function(){
     courtSession2.complaintPresented({severity: 8});
     courtSession2.complaintPresented({severity: 12});
 
-    
+
+
+
+
