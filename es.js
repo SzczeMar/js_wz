@@ -87,8 +87,6 @@ Car.prototype.getBrand = function(){
     return this.brand;
 }
 
-var car = new Car('Ford');
-console.log(car.getBrand());
 
 // ES6
 class Car{
@@ -101,9 +99,6 @@ class Car{
     }
 }
 
-const car = new Car('Ford');
-console.log(car.getBrand());
-
 
 class SportsCar extends Car{
     constructor(brand, hp){
@@ -115,3 +110,6 @@ class SportsCar extends Car{
         return this.hp;
     }
 }
+
+let car = new Car('Ford');
+const sportsCar = new SportsCar('Audi', 350);
