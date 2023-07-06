@@ -62,7 +62,7 @@ class Application {
             shapesCopy.push(shape.clone());
         }
     }
-}
 
+}
 let app = new Application();
 app.businessLogic();

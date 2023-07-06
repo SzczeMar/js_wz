@@ -62,15 +62,26 @@ class MacCheckbox extends Checkbox {
     }
 }
 
+class Application {
+    constructor(factory) {
+        this.factory = factory;
+    }
+    createUI() {
+        this.button = this.factory.createButton();
+    }
+    paint() {
+        this.button.paint();
+    }
+}
+
 class ApplicationConfigurator {
     main() {
-        // We're just mocking a config file here
-        let config = { OS: "Windows" };
-
+        let config = "Windows"; // or "Mac"
         let factory;
-        if (config.OS === "Windows") {
+
+        if (config === "Windows") {
             factory = new WinFactory();
-        } else if (config.OS === "Mac") {
+        } else if (config === "Mac") {
             factory = new MacFactory();
         } else {
             throw new Error("Error! Unknown operating system.");
