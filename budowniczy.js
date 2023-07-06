@@ -125,3 +125,4 @@ class Application {
 
 let app = new Application();
 app.makeCar();
+console.log("Done!");

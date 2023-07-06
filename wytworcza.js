@@ -61,11 +61,10 @@ class HTMLButton extends Button {
 class Application {
     initalize() {
         let config = 'Windows';
-        let dialog;
         if (config === 'Windows') {
-            dialog = new WindowsDialog();
+            this.dialog = new WindowsDialog();
         } else if (config === 'Web') {
-            dialog = new WebDialog();
+            this.dialog = new WebDialog();
         } else {
             throw new Error('Error! Unknown operating system.');
         }
